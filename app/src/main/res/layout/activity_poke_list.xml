@@ -5,13 +5,15 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/layout_activity_poke_list"
     tools:context="com.brick.pokemon.PokeListActivity">
 
     <EditText
         android:padding="15sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search"/>
+        android:hint="Search"
+        android:id="@+id/pk_search"/>
 
     <ListView
         android:layout_width="match_parent"

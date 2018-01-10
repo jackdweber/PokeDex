@@ -7,65 +7,27 @@
     android:padding="10sp">
 
     <TextView
-        android:layout_weight="1"
+        android:padding="10sp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text="Number"
         android:id="@+id/pk_number"/>
     <TextView
-        android:layout_weight="1"
+        android:padding="10sp"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text="Name"
         android:id="@+id/pk_name"/>
+
     <TextView
-        android:layout_weight="1"
+        android:id="@+id/pk_type"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="Type"
-        android:id="@+id/pk_type"/>
-    <TextView
         android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Total"
-        android:id="@+id/pk_total"/>
-    <TextView
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="HP"
-        android:id="@+id/pk_hp"/>
-    <TextView
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Atk"
-        android:id="@+id/pk_attack"/>
-    <TextView
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Def"
-        android:id="@+id/pk_defense"/>
-    <TextView
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="SpAtk"
-        android:id="@+id/pk_spattack"/>
-    <TextView
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="SpDef"
-        android:id="@+id/pk_spdefense"/>
-    <TextView
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="Speed"
-        android:id="@+id/speed"/>
+        android:gravity="right"
+        android:padding="10sp"
+        android:text="Poison" />
+
 
 
 </LinearLayout>
