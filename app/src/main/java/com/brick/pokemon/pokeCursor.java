@@ -31,7 +31,7 @@ public class pokeCursor extends CursorAdapter {
 
         pk_number.setText(cursor.getString(cursor.getColumnIndex("number")));
         pk_name.setText(cursor.getString(cursor.getColumnIndex("name")));
-        pk_type.setText(cursor.getString(cursor.getColumnIndex("average")));
+        pk_type.setText(cursor.getString(cursor.getColumnIndex("type")));
 
 
     }

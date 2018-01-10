@@ -8,12 +8,14 @@
 
     <TextView
         android:padding="10sp"
+        android:gravity="center_vertical"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text="Number"
         android:id="@+id/pk_number"/>
     <TextView
         android:padding="10sp"
+        android:gravity="center_vertical"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text="Name"
@@ -21,10 +23,10 @@
 
     <TextView
         android:id="@+id/pk_type"
+        android:gravity="right|center_vertical"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:gravity="right"
         android:padding="10sp"
         android:text="Poison" />
 
