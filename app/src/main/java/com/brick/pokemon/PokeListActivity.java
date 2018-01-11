@@ -86,6 +86,9 @@ public class PokeListActivity extends AppCompatActivity {
         pokeList.setOnItemClickListener(listener);
     }
 
+
+    //Create The cursors for search
+
     public void loadFirst() {
         Cursor cr = _db.getAll();
         _cAdapter = new pokeCursor(this, cr, false);
