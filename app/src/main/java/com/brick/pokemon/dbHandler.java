@@ -36,4 +36,10 @@ public class dbHandler extends SQLiteAssetHelper {
         String q = "select * from pokemon where name like '" + s + "%'";
         return db.rawQuery(q, null);
     }
+
+    public Cursor getWithSpecificQuery(String s){
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery(s, null);
+    }
+
 }

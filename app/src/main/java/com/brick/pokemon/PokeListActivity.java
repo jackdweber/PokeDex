@@ -1,26 +1,25 @@
 package com.brick.pokemon;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.CursorAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
 
 public class PokeListActivity extends AppCompatActivity {
-
-
-    public static final String[] POKEDEX_COLUMNS = {
-        "number", "name", "type", "total", "hp", "attack", "defense", "spattack", "spdefense", "speed"
-    };
 
 
     private ListView pokeList;
@@ -44,7 +43,7 @@ public class PokeListActivity extends AppCompatActivity {
         loadFirst();
 
         searchListenerInit();
-
+        itemClickListenerInit();
     }
 
     private void searchListenerInit(){
@@ -69,6 +68,22 @@ public class PokeListActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void itemClickListenerInit(){
+        final Intent intent = new Intent(this, PokemonInfoActivity.class);
+
+        AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                TextView tv = view.findViewById(R.id.pk_name);
+                String name = tv.getText().toString();
+                intent.putExtra("name", name);
+                startActivity(intent);
+            }
+        };
+
+        pokeList.setOnItemClickListener(listener);
     }
 
     public void loadFirst() {

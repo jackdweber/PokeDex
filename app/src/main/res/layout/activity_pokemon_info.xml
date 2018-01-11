@@ -1,9 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top|center"
+    android:padding="30sp"
     tools:context="com.brick.pokemon.PokemonInfoActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Squirtle"
+        android:textSize="25sp"
+        android:layout_marginBottom="20sp"
+        android:textStyle="bold"
+        android:id="@+id/pk_info_name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="001"
+        android:layout_marginBottom="5sp"
+        android:id="@+id/pk_info_number"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TYPE1 TYPE2"
+        android:gravity="center"
+        android:layout_marginBottom="5sp"
+        android:id="@+id/pk_info_type"/>
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="6">
+
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:text="HP"/>
+        <TextView
+            android:layout_columnWeight="1"
+            android:gravity="right"
+            android:text="300"
+            android:id="@+id/pk_info_hp"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:text="Attack"/>
+        <TextView
+            android:gravity="right"
+            android:layout_columnWeight="1"
+            android:text="300"
+            android:id="@+id/pk_info_attack"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:text="Defense"/>
+        <TextView
+            android:gravity="right"
+            android:layout_columnWeight="1"
+            android:text="300"
+            android:id="@+id/pk_info_defense"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:text="Sp. Attack"/>
+        <TextView
+            android:gravity="right"
+            android:layout_columnWeight="1"
+            android:text="300"
+            android:id="@+id/pk_info_spattack"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:text="Sp. Defense"/>
+        <TextView
+            android:gravity="right"
+            android:layout_columnWeight="1"
+            android:text="300"
+            android:id="@+id/pk_info_spdefense"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:text="Speed"/>
+        <TextView
+            android:gravity="right"
+            android:layout_columnWeight="1"
+            android:text="300"
+            android:id="@+id/pk_info_speed"/>
+
+
+
+    </GridLayout>
+
+</LinearLayout>
