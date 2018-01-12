@@ -11,7 +11,9 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:src="@drawable/poke_1"
+        android:id="@+id/pk_info_img"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,8 +41,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:columnCount="2"
-        android:rowCount="6">
+        android:rowCount="7">
 
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_columnWeight="1"
+            android:text="Total"/>
+        <TextView
+            android:layout_columnWeight="1"
+            android:gravity="right"
+            android:text="300"
+            android:id="@+id/pk_info_total"/>
 
         <TextView
             android:textStyle="bold"
