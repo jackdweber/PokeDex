@@ -1,5 +1,8 @@
 package com.brick.pokemon;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -78,5 +81,18 @@ public class PokemonInfoActivity extends AppCompatActivity {
         ImageView iv = findViewById(R.id.pk_info_img);
         iv.setImageDrawable(getResources().getDrawable(img_id));
 
+        //Create the fragment
+        int id = Integer.parseInt(dict.get("number"));
+        createFragment(id);
+
+    }
+
+    private void createFragment(int id) {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        MoreInfoFragment fragment = MoreInfoFragment.newInstance();
+        Bundle args = new Bundle();
+        args.putInt("pokemonId", id);
+        fragment.setArguments(args);
     }
 }

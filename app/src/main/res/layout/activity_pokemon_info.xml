@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="top|center"
-    android:padding="30sp"
+    android:padding="20sp"
     tools:context="com.brick.pokemon.PokemonInfoActivity">
 
     <ImageView
@@ -113,9 +113,15 @@
             android:layout_columnWeight="1"
             android:text="300"
             android:id="@+id/pk_info_speed"/>
-
-
-
     </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/moreInfoFragment"
+        android:name="com.brick.pokemon.MoreInfoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+    </LinearLayout>
 
 </LinearLayout>
